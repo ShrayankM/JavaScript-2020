@@ -33,52 +33,37 @@ function getActivePlayer() {
 
 function changeActivePlayer() {
     let p = getActivePlayer();
-    if (p === 'playerOne') {
-        document.querySelector('.playerOne').classList.remove('player-active');
-        document.querySelector('.playerTwo').classList.add('player-active');
-        pOneCurrent.textContent = String(0);
-    }
-    else {
-        document.querySelector('.playerTwo').classList.remove('player-active');
-        document.querySelector('.playerOne').classList.add('player-active');
-        pTwoCurrent.textContent = String(0);
-    }
+
+    document.querySelector('.playerone').classList.toggle('player-active');
+    document.querySelector('.playertwo').classList.toggle('player-active');
+
+    if (p === 'playerone') pOneCurrent.textContent = String(0);
+    else                   pTwoCurrent.textContent = String(0);
 }
 
 function updateScore(playerActive) {
-    if (playerActive === 'playerOne') {
-        pOneScore.textContent = String(Number(pOneScore.textContent) + Number(pOneCurrent.textContent));
-        if (checkScore(1)) flag = false;
-        pOneCurrent.textContent = String(0);
-    }
-    else {
-        pTwoScore.textContent = String(Number(pTwoScore.textContent) + Number(pTwoCurrent.textContent));
-        if (checkScore(2)) flag = false;
-        pTwoCurrent.textContent = String(0);
-    }
+    let p;
+    if (playerActive === 'playerone') p = 'one';
+    else                              p = 'two';
+
+    const playerScore   = document.querySelector(`#score-${p}`);
+    const playerCurrent = document.querySelector(`#current-p-${p}`);
+
+    playerScore.textContent   = Number(playerScore.textContent) + Number(playerCurrent.textContent);
+    if (checkScore(p)) flag = false;
+    playerCurrent.textContent = 0; 
 }
 
 function checkScore(n) {
-    if (n === 1) {
-        let score = Number(pOneScore.textContent);
-        if (score >= winScore) {
-            document.querySelector('.playerOne').classList.add('win');
-            // document.querySelector('#player-one').style.color = "white";
-            playerWon = 1;
-            return true;
-        }
-        return false;
+
+    let score = Number(document.querySelector(`#score-${n}`).textContent);
+    console.log(score);
+    if (score >= winScore) {
+        document.querySelector(`.player${n}`).classList.add('win');
+        playerWon = n === 'one' ? 1 : 2;
+        return true;
     }
-    else {
-        let score = Number(pTwoScore.textContent);
-        if (score >= winScore) {
-            document.querySelector('.playerTwo').classList.add('win');
-            // document.querySelector('#player-two').style.color = "white";
-            playerWon = 2;
-            return true;
-        }
-        return false;
-    }
+    return false;
 }
 
 rollBtn.addEventListener(
@@ -92,16 +77,15 @@ rollBtn.addEventListener(
             playerActive = getActivePlayer();
 
             if (diceValue === 1) {
-                // updateScore(playerActive);
                 changeActivePlayer();
             }
             else {
-                if (playerActive === 'playerOne') {
-                    pOneCurrent.textContent = String(Number(pOneCurrent.textContent) + diceValue);
-                }
-                else {
-                    pTwoCurrent.textContent = String(Number(pTwoCurrent.textContent) + diceValue);
-                }
+                let p;
+                if (playerActive === 'playerone') p = 'one';
+                else                              p = 'two';
+
+                let playerScore = document.querySelector(`#current-p-${p}`); 
+                playerScore.textContent = Number(playerScore.textContent) + diceValue;
             }
         }
     }
@@ -118,23 +102,19 @@ holdBtn.addEventListener(
 
 newBtn.addEventListener(
     'click', function() {
-
         if (!flag) {
-            if (playerWon === 1) document.querySelector('.playerOne').classList.remove('win');
-            else                 document.querySelector('.playerTwo').classList.remove('win');
+            if (playerWon === 1) document.querySelector('.playerone').classList.remove('win');
+            else                 document.querySelector('.playertwo').classList.remove('win');
         }
 
         let p = getActivePlayer();
-        if (p !== 'playerOne') changeActivePlayer();
+        if (p !== 'playerone') changeActivePlayer();
 
         pOneScore.textContent = String(0);
         pOneCurrent.textContent = String(0);
 
         pTwoScore.textContent = String(0);
         pTwoCurrent.textContent = String(0);
-
-        // document.querySelector('playerTwo').style.backgroundColor = "#B66D97";
-        // document.querySelector('playerOne').style.backgroundColor = "#DBA4B4";
 
         flag = true;
         diceImg.classList.add('hidden');
