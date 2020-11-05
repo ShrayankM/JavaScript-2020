@@ -1,7 +1,11 @@
 'use strict';
 
 // * Number to be guesssed
-let myNumber = Math.round(Math.random() * 20 + 1);
+function generateRandom() {
+    return Math.round(Math.random() * 20 + 1);
+}
+
+let myNumber = generateRandom();
 
 // TODO DOM Elements
 const guessBtn = document.querySelector('.guess');
@@ -9,6 +13,7 @@ const message  = document.querySelector('.message');
 const number = document.querySelector('.number');
 const score = document.querySelector('.score');
 const highscore = document.querySelector('.highscore');
+const body = document.querySelector('body');
 
 // * Game Score
 let scoreValue = Number(score.textContent);
@@ -36,7 +41,7 @@ document.querySelector('.check').addEventListener(
                 message.textContent = "😎️ Correct Number !!!";
                 number.textContent = String(myNumber);
 
-                document.querySelector('body').style.backgroundColor = "#60b347";
+                body.style.backgroundColor = "#60b347";
 
                 number.style.width = '30rem';
 
@@ -58,14 +63,14 @@ document.querySelector('.check').addEventListener(
 document.querySelector('.again').addEventListener(
     'click', function() {
         score.textContent = '20';
-        document.querySelector('body').style.backgroundColor = '#222';
+        body.style.backgroundColor = '#222';
         message.textContent = "Start guessing...";
         guessBtn.value = "";
         number.style.width = '15rem';
         number.textContent = '?';
 
         scoreValue = Number(score.textContent);
-        myNumber = Math.round(Math.random() * 20 + 1);
+        myNumber = generateRandom();
 
     }
 );
