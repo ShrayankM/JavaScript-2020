@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title> Connect Four </title>
+</head>
+
+<body>
+    <div class="game">
+        <div class="players">
+            <div class="player player-one player-active-one">
+                <div class="player-one-label">
+                    <p class="alphabet"> P </p>
+                    <p class="alphabet"> L </p>
+                    <p class="alphabet"> A </p>
+                    <p class="alphabet"> Y </p>
+                    <p class="alphabet"> E </p>
+                    <p class="alphabet"> R </p>
+                    <p class="alphabet"> 1 </p>
+                </div>
+            </div>
+
+            <div class="player player-two">
+                <div class="player-two-label">
+                    <p class="alphabet"> P </p>
+                    <p class="alphabet"> L </p>
+                    <p class="alphabet"> A </p>
+                    <p class="alphabet"> Y </p>
+                    <p class="alphabet"> E </p>
+                    <p class="alphabet"> R </p>
+                    <p class="alphabet"> 2 </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="board">
+            <div class="row-one">
+                <button type="button" id="R0C0" class="row-0 bns btn btn-light"> 1 </button>
+                <button type="button" id="R0C1" class="row-0 bns btn btn-light"> 2 </button>
+                <button type="button" id="R0C2" class="row-0 bns btn btn-light"> 3 </button>
+                <button type="button" id="R0C3" class="row-0 bns btn btn-light"> 4 </button>
+                <button type="button" id="R0C4" class="row-0 bns btn btn-light"> 5 </button>
+                <button type="button" id="R0C5" class="row-0 bns btn btn-light"> 6 </button>
+            </div>
+
+            <div class="row-two" id="row-1">
+                <button type="button" id="R1C0" class="bns btn btn-light active"> 1 </button>
+                <button type="button" id="R1C1" class="bns btn btn-light active"> 2 </button>
+                <button type="button" id="R1C2" class="bns btn btn-light active"> 3 </button>
+                <button type="button" id="R1C3" class="bns btn btn-light active"> 4 </button>
+                <button type="button" id="R1C4" class="bns btn btn-light active"> 5 </button>
+                <button type="button" id="R1C5" class="bns btn btn-light active"> 6 </button>
+            </div>
+
+            <div class="row-three" id="row-2">
+                <button type="button" id="R2C0" class="bns btn btn-light active"> 1 </button>
+                <button type="button" id="R2C1" class="bns btn btn-light active"> 2 </button>
+                <button type="button" id="R2C2" class="bns btn btn-light active"> 3 </button>
+                <button type="button" id="R2C3" class="bns btn btn-light active"> 4 </button>
+                <button type="button" id="R2C4" class="bns btn btn-light active"> 5 </button>
+                <button type="button" id="R2C5" class="bns btn btn-light active"> 6 </button>
+            </div>
+
+            <div class="row-four" id="row-3">
+                <button type="button" id="R3C0" class="bns btn btn-light active"> 1 </button>
+                <button type="button" id="R3C1" class="bns btn btn-light active"> 2 </button>
+                <button type="button" id="R3C2" class="bns btn btn-light active"> 3 </button>
+                <button type="button" id="R3C3" class="bns btn btn-light active"> 4 </button>
+                <button type="button" id="R3C4" class="bns btn btn-light active"> 5 </button>
+                <button type="button" id="R3C5" class="bns btn btn-light active"> 6 </button>
+            </div>
+
+            <div class="row-five" id="row-4">
+                <button type="button" id="R4C0" class="bns btn btn-light active"> 1 </button>
+                <button type="button" id="R4C1" class="bns btn btn-light active"> 2 </button>
+                <button type="button" id="R4C2" class="bns btn btn-light active"> 3 </button>
+                <button type="button" id="R4C3" class="bns btn btn-light active"> 4 </button>
+                <button type="button" id="R4C4" class="bns btn btn-light active"> 5 </button>
+                <button type="button" id="R4C5" class="bns btn btn-light active"> 6 </button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
