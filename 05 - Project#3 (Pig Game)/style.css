@@ -76,12 +76,12 @@ body {
     background-color: rgba(255, 255, 255, 0.4);
 }
 
-.playerOne {
+.playerone {
     border-bottom-left-radius: 9px;
     border-top-left-radius: 9px;
 }
 
-.playerTwo {
+.playertwo {
     border-bottom-right-radius: 9px;
     border-top-right-radius: 9px;
 }
