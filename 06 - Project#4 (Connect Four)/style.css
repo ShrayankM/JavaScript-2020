@@ -19,7 +19,7 @@ body {
 }
 
 .game {
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
     width: 100rem;
     height: 60rem;
     background-color: white;
@@ -74,7 +74,7 @@ body {
 }
 
 .row-one {
-   margin-top: 3rem; 
+   margin-top: 1rem; 
    text-align: center;
 }
 
@@ -113,3 +113,14 @@ body {
 .player-active-two {
     background: rgb(4, 15, 219, 1.0);
 }
+
+.reset {
+    /* margin-left: 5rem; */
+    text-align: center;
+    font-size: 1.2rem;
+    width: 100%;
+    height: 3rem;
+    margin: auto;
+    margin-top: 1.8rem;
+}
+
