@@ -36,31 +36,88 @@ const restaurant = {
 
 };
 
+
+//TODO Objects Looping
+
+const keys = Object.keys(restaurant);
+const values = Object.values(restaurant);
+const entries = Object.entries(restaurant);
+
+console.log(keys);
+console.log(values);
+
+for (let [key, value] of entries) console.log(key, value);
+
+//TODO Optional Chaining
+// const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+// const r = 'restaurant', o = 'openingHours';
+
+// for (let day of days) {
+//   const open = restaurant[o]?.[day]?.open ?? 'does Not Open';
+//   console.log(`On ${day}, we open at ${open}`);
+// }
+
+// const m = 'order';
+// const mnew = 'orderRissto';
+
+// console.log(restaurant[m]?.(0, 1) ?? "Method does not exist");
+// console.log(restaurant[mnew]?.(0, 1) ?? "Method does not exist");
+
+//TODO Enhanced Object Literals
+// const objOne = {
+//   a: 45,
+//   b: 67,
+//   c: 78,
+// };
+
+// const objTwo = {
+//   objOne,
+//   d: 90,
+//   name: 'Jack',
+
+//   details() {
+//     const {a, b, c} = this.objOne;
+//     console.log(`Details: name = ${this.name}, d = ${this.d}, objOne = [${a}, ${b}, ${c}]`);
+//   }
+// };
+
+// console.log(objTwo);
+
+// objTwo.details();
+
+//TODO for-of Loop
+
+// const menu = [...restaurant.mainMenu, ...restaurant.starterMenu];
+// // for (let m of menu) console.log(m);
+
+// for (let [index, value] of menu.entries()) console.log(`${index + 1}: ${value}`);
+
+
 // TODO Rest Patterns
-const [a, b, ...others] = [1, 2, 3, 4, 5]
-console.log(a, b, others);
+// const [a, b, ...others] = [1, 2, 3, 4, 5]
+// console.log(a, b, others);
 
-const [pizza, pasta, ...otherFoods] = [...restaurant.mainMenu, ...restaurant.starterMenu];
-console.log(pizza, pasta, otherFoods);
-console.log(typeof otherFoods);
+// const [pizza, pasta, ...otherFoods] = [...restaurant.mainMenu, ...restaurant.starterMenu];
+// console.log(pizza, pasta, otherFoods);
+// console.log(typeof otherFoods);
 
-const {sat, ...weekdays} = restaurant.openingHours;
-console.log(sat, weekdays); 
+// const {sat, ...weekdays} = restaurant.openingHours;
+// console.log(sat, weekdays); 
 
-const add = function(...numbers) {
-  let sum = 0, N = numbers.length;
-  for (let i = 0; i < N; i++)
-    sum += numbers[i];
+// const add = function(...numbers) {
+//   let sum = 0, N = numbers.length;
+//   for (let i = 0; i < N; i++)
+//     sum += numbers[i];
   
-  console.log(sum);
-}
+//   console.log(sum);
+// }
 
-add(2, 3);
-add(4, 5, 6);
-add(6, 7, 8, 1, 2, 3);
+// add(2, 3);
+// add(4, 5, 6);
+// add(6, 7, 8, 1, 2, 3);
 
-const x = [12, 78, 9, 10];
-add(67, ...x, 56, 7, 0);
+// const x = [12, 78, 9, 10];
+// add(67, ...x, 56, 7, 0);
 
 // TODO Spread Operator
 
