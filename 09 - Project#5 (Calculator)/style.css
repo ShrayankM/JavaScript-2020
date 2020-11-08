@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 20px;
+}
+
+.main {
+    margin: auto;
+    margin-top: 50px;
+    height: 500px;
+    width: 500px;
+    border: 5px solid black;
+    padding: 20px;
+}
+
+.expression {
+    /* border: 2px solid gray; */
+    border-radius: 5px;
+    width: 100%;
+    height: 70px;
+    margin: auto;
+    text-align: right;
+    font-size: 30px;
+}
+
+.operators {
+    text-align: center;
+    /* padding: 10px; */
+}
+
+.opr {
+    display: inline-block;
+    width: 23.3%;
+    height: 60px;
+    margin-top: 10px;
+}
+
+.numbers {
+    margin: auto;
+    margin-top: 5px;
+    float: left;
+    /* border: 2px solid red; */
+    height: 300px;
+    width: 339px;
+}
+
+.equalbtn {
+    margin: auto;
+    margin-top: 10px;
+    float: right;
+    /* border: 2px solid blue; */
+    /* background-color: blue; */
+    height: 300px;
+    width: 107px;
+    /* background-color: rgb(39, 127, 229); */
+}
+
+.num {
+    display: inline-block;
+    width: 31.4%;
+    height: 65.90px;
+    margin-top: 5px; 
+    transition: all 0.2s; 
+}
+
+.btn {
+    border-radius: 35px;
+    transition: all 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, .2);
+}
+
+.btn:active {
+    transform: translateY(2px);
+}
+
+.clear {
+    display: inline-block;
+    width: 31.4%;
+    height: 65.90px;
+    margin-top: 5px; 
+}
+
+.numbers-row-two {
+    margin-top: 7px;
+}
+
+.numbers-row-three {
+    margin-top: 7px;
+}
+
+.numbers-row-four {
+    margin-top: 7px;
+}
