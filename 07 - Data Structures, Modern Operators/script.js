@@ -37,16 +37,97 @@ const restaurant = {
 };
 
 
+//TODO Sets, Maps
+//* Sets Datastructure
+
+// const orderSet = new Set(['Pasta', 'Noodles', 'Garlic Bread', 'Pizza', 'Pasta', 'Pizza']);
+// console.log(orderSet);
+
+// orderSet.add('Fried Rice');
+// console.log(orderSet.has('Pasta'));
+
+// // console.log(orderSet.keys());
+// orderSet.delete('Pasta');
+// // orderSet.clear();
+
+// console.log(orderSet);
+
+// const numSet = new Set([12, 3, 45, 6, 6, 78, 12, 1, 3, 45]);
+// console.log(numSet);
+
+
+// const newArray = new Array(12, 3, 45, 6, 6, 78, 12, 1, 3, 45);
+
+
+//* Maps Datastructure
+
+// const rest = new Map();
+// rest.set('name', 'Classico Italian');
+// rest.set('open', 10).set('close', 23).set(true, 'We are open :)').set(false, 'We are close :(');
+
+// const time = 4;
+// console.log(rest.get(time > rest.get('open') && time < rest.get('close')));
+
+
+// rest.set([1, 2], 'Test');
+
+// // ! Gives undefined
+// console.log(rest.get([1, 2]));
+
+
+// const arr = [3, 4];
+// rest.set(arr, 'Test');
+
+// console.log(rest.get(arr));
+
+// const header = new Map();
+// header.set(document.querySelector('h1'), 'Heading');
+
+// console.log(header);
+
+// console.log(header.get(document.querySelector('h1')));
+
+// * Maps Iterable
+
+const question = new Map([
+  ['question', 'What is the best programming language in the world?'],
+  [1, 'C++'],
+  [2, 'Java'],
+  [3, 'Python'],
+  [4, 'JavaScript'],
+  ['correct', 3],
+  [true, 'Correct Answer !!!'],
+  [false, 'Wrong Answer']
+]);
+
+console.log(question);
+
+console.log(question.get('question'));
+for(const [key, value] of question) {
+  (typeof key === 'number') ? console.log(`Option ${key} =  ${value}`) : '';
+}
+
+// const ans = Number(prompt("Enter your choice"));
+const ans = 3;
+
+console.log(question.get(question.get('correct') === ans));
+
+// * Convert objects to Maps
+const hoursMap = new Map(Object.entries(restaurant.openingHours));
+
+console.log(hoursMap);
+
+
 //TODO Objects Looping
 
-const keys = Object.keys(restaurant);
-const values = Object.values(restaurant);
-const entries = Object.entries(restaurant);
+// const keys = Object.keys(restaurant);
+// const values = Object.values(restaurant);
+// const entries = Object.entries(restaurant);
 
-console.log(keys);
-console.log(values);
+// console.log(keys);
+// console.log(values);
 
-for (let [key, value] of entries) console.log(key, value);
+// for (let [key, value] of entries) console.log(key, value);
 
 //TODO Optional Chaining
 // const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
