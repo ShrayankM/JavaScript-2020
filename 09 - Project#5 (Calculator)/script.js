@@ -14,7 +14,7 @@ let expEvaluate = "";
 
 for (let i = 0; i < oprN; i++) {
     operators[i].addEventListener('click', function() {
-        console.log(operators[i].textContent);
+        // console.log(operators[i].textContent);
 
         expEvaluate += operators[i].name;
         exp.textContent += operators[i].textContent;
@@ -23,7 +23,7 @@ for (let i = 0; i < oprN; i++) {
 
 for (let i = 0; i < numN; i++) {
     numbers[i].addEventListener('click', function() {
-        console.log(numbers[i].textContent);
+        // console.log(numbers[i].textContent);
 
         expEvaluate += numbers[i].textContent;
         exp.textContent += numbers[i].textContent;
@@ -42,7 +42,7 @@ function checkValid(a) {
 
 function calculate(a, op, b) {
 
-    
+    // console.log(a, op, b);
     if (op == '+') return a + b;
     if (op == '-') return a - b;
     if (op == '*') return a * b;
@@ -58,9 +58,22 @@ equalBtn.addEventListener('click', function() {
     let a = 0, b = 0, c = op = '';
     while (i < str.length) {
         if (flag) {
-            a = Number(str[i]);
-            op = str[i + 1];
-            b = Number(str[i + 2]);
+
+            let j = i;
+            while (Number(str[j]) || Number(str[j]) == 0) j++;
+
+            a = Number(str.substring(i, j));
+            i = j;
+            op = str[i];
+            
+            j++;
+            while (Number(str[j]) || Number(str[j]) == 0) j++;
+
+            b = Number(str.substring(i + 1, j));
+
+            i = j;
+
+            console.log(a, op, b);
 
             if (checkValid(a) && checkValid(op) && checkValid(b)) { 
                 a = calculate(a, op, b);
@@ -70,17 +83,25 @@ equalBtn.addEventListener('click', function() {
                 break;
             }
             flag = false;
-            i = i + 3;
+            // i = i + 3;
         }
         else { 
             op = str[i];
-            c = Number(str[i + 1]);
+            let j = i + 1;
+
+            while (Number(str[j]) || Number(str[j]) == 0) j++;
+            c = Number(str.substring(i + 1, j));
+
+            i = j;
+
+            console.log(a, op, c);
 
             if (checkValid(a) && checkValid(op) && checkValid(c)) { 
                 a = calculate(a, op, c);
             }
-            i = i + 2;
+            // i = i + 2;
         }
     }
     exp.textContent = a;
+    expEvaluate = a;
 })
