@@ -55,25 +55,26 @@ equalBtn.addEventListener('click', function() {
     let i = 0;
     let flag = true;
 
-    let a = 0, b = 0, c = op = '';
+    let a = undefined, b = undefined, c = op = '';
+    console.log(a, op, b);
     while (i < str.length) {
         if (flag) {
 
             let j = i;
-            while (Number(str[j]) || Number(str[j]) == 0) j++;
+            while (Number(str[j]) || Number(str[j]) == 0 || str[j] == '.') j++;
 
             a = Number(str.substring(i, j));
             i = j;
             op = str[i];
             
             j++;
-            while (Number(str[j]) || Number(str[j]) == 0) j++;
+            while (Number(str[j]) || Number(str[j]) == 0 || str[j] == '.') j++;
 
             b = Number(str.substring(i + 1, j));
 
             i = j;
 
-            console.log(a, op, b);
+            console.log("First", a, op, b);
 
             if (checkValid(a) && checkValid(op) && checkValid(b)) { 
                 a = calculate(a, op, b);
@@ -89,12 +90,12 @@ equalBtn.addEventListener('click', function() {
             op = str[i];
             let j = i + 1;
 
-            while (Number(str[j]) || Number(str[j]) == 0) j++;
+            while (Number(str[j]) || Number(str[j]) == 0 || str[j] == '.') j++;
             c = Number(str.substring(i + 1, j));
 
             i = j;
 
-            console.log(a, op, c);
+            console.log("Second", a, op, c);
 
             if (checkValid(a) && checkValid(op) && checkValid(c)) { 
                 a = calculate(a, op, c);
