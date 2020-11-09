@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #D1DBDC;
+}
+
+.main {
+    display: block;
+    margin: auto;
+    margin-top: 40px;
+    /* border: 2px solid black; */
+    background-color: #D1DBDC;
+    height: 80vh;
+    width: 600px;
+}
+
+.heading {
+    margin: auto;
+}
+
+.game {
+    margin: auto;
+    /* border: 2px solid black; */
+    /* background-color: #518ABB; */
+    margin-top: 10px;
+}
+
+
+.btn {
+    background-color: #518ABB;
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 150px;
+    height: 150px;
+    transition: all 0.2s;
+    font-size: 50px;
+}
+
+.newBtn:hover {
+    transform: scaleX(1.05) scaleY(1.05) translateY(-5px); 
+}
+
+.btn:hover {
+    /* transform: scaleX(1.05) scaleY(1.05) translateY(-5px); */
+    /* opacity: 0; */
+}
+
+.btn:active {
+    transform: translateY(2px);
+}
+
+.times {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.message {
+    display: block;
+    /* background-color: yellow; */
+    margin: auto;
+    width: 600px;
+    height: 30px;
+    font-weight: bold;
+}
+
+.reset-block {
+    display: block;
+}
+
+.reset {
+    /* display: block; */
+    background-color: yellow;
+    border: 1px solid black;
+    margin: auto;
+    width: 145px;
+    height: 30px;
+    border-radius: 10px;
+    font-size: 20px;
+    transition: all 0.2s;
+}
+
+.reset:hover {
+    transform: scaleX(1.05) scaleY(1.05) translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    /* opacity: 0; */
+}
+
+h2 {
+    text-align: center;
+    margin-top: 20px;
+}
