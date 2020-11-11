@@ -125,3 +125,73 @@ body {
 .right {
     background-color:rgb(12, 255, 0, 1);
 }
+
+.messageWin {
+    /* margin-top: 3rem; */
+    font-size: 3rem;
+}
+
+.reset {
+    height: 3rem;
+    width: 7rem;
+
+    border-radius: .4rem;
+    /* border-radius: 50%; */
+    background-color:  rgba(238, 4, 4, 0.685);
+
+    font-size: 2rem;
+    border: .1rem solid red;
+
+    transition: all 0.2s;
+}
+
+.reset:hover {
+    transform: translateY(-.3rem);
+    box-shadow: .3rem .3rem .2rem .1rem rgba(0, 0, 0, .2);
+}
+
+.reset:active {
+    transform: translateY(.2rem);
+}
+
+.hint-section {
+    /* border: .2rem solid black; */
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+
+.hint {
+    float: left;
+
+    height: 3rem;
+    width: 7rem;
+
+    border-radius: .4rem;
+    /* border-radius: 50%; */
+    background-color:  rgba(24, 186, 0, 1);
+
+    font-size: 2rem;
+    border: .1rem solid rgba(24, 186, 0, 1);
+
+    transition: all 0.2s;
+}
+
+.hint:hover {
+    transform: translateY(-.3rem);
+    box-shadow: .3rem .3rem .2rem .1rem rgba(0, 0, 0, .2);
+}
+
+.hint:active {
+    transform: translateY(.2rem);
+}
+
+.hint-message {
+    margin-top: .5rem;
+    float: left;
+    font-size: 2rem;
+    margin-left: 3rem;
+}
+
+.hidden {
+    display: none;
+}

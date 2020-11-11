@@ -13,12 +13,15 @@
 
     <div class = "main">
         <div class = "Top-pane">
-            <div class = "box-word-top"></div>
+            <div class = "box-word-top">
+                <h3> Hangman Game </h3>
+                <h6> (Press KEYS or Select using Mouse from alphabets given below [6 Lives avaliable])</h6>
+                <button class = "reset"> Reset </button>
+            </div>
             <div class = "box-word">
                 <div class = "words">
                     <h2 class = "word"></h2>
                     <h2 class = "dash"></h2>
-                    <!-- <h3 class = "category"> The category is </h3> -->
                 </div>
                 <div class = "chances">
                     <button class = "btn green" id = 'B0'>&times;</button>
@@ -27,13 +30,16 @@
                     <button class = "btn green" id = 'B3'>&times;</button>
                     <button class = "btn green" id = 'B4'>&times;</button>
                     <button class = "btn green" id = 'B5'>&times;</button>
-                    <!-- <h3 class = "r-chances"> Remaining Chances!!! </h3> -->
                 </div>
             </div>
         </div>
         <div class = "Bottom-pane">
             <div class = "alphabets"></div>
             <h4 class = "messageWin"></h4>
+            <div class = "hint-section">
+                <button class = "hint"> Hint </button>
+                <h6 class = "hint-message hidden"></h6>
+            </div>
         </div>
     </div>
 </body>
