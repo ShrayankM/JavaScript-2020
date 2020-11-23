@@ -10,5 +10,5 @@ and in this way guides the player to the correct number.
 ## Credits:
    * Built with the help of udemy course (The Complete JavaScript Course 2020: From Zero to Expert).
 
-[!start](Images/start.png)
-[!end](Images/end.png)
+![start](Images/start.png)
+![end](Images/end.png)
