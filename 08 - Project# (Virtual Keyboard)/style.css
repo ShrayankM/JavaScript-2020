@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 30px;
+}
+
+.keyboard {
+    position: relative;
+    height: 90vh;
+    background-image: linear-gradient(to right, lightgray, gray);
+    padding: 5px;
+    /* text-align: center; */
+}
+
+.numbers-section {
+    margin-top: .5rem;
+    font-size: 1.5rem;
+}
+
+.tab-section {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.shift-section {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.caps-section {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.ctrl-section {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.num {
+    border: .1rem solid black;
+    margin: .1rem;
+    padding: .2rem;
+}
