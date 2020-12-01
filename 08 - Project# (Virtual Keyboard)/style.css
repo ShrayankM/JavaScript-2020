@@ -87,5 +87,6 @@ body {
 .num-active {
     background-color: white;
     color: black;
-    transform: translateY(.1rem);
+    transform: translateY(.2rem);
+    box-shadow: .3rem .3rem .2rem .1rem rgba(0, 0, 0, .2);
 }

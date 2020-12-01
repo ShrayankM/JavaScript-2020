@@ -25,11 +25,19 @@ document.addEventListener('keydown', function(e) {
     if (e.key == "Shift") setContent();
     if (e.key != "Shift") {
         text.textContent += e.key;
+        let asciiChar = e.key.charCodeAt(0);
+        console.log(`._${asciiChar}`);
+        document.querySelector(`._${asciiChar}`).classList.add('num-active');
     }
 })
 
 document.addEventListener('keyup', function(e) {
     if (e.key == "Shift") setContent();
+    if (e.key != "Shift") {
+        let asciiChar = e.key.charCodeAt(0);
+        console.log(asciiChar);
+        document.querySelector(`._${asciiChar}`).classList.remove('num-active');
+    }
 })
 
 function setContent() {
@@ -37,6 +45,8 @@ function setContent() {
     //* Tab Section
     for (let i = 1; i < tab.length; i++) {
         tab[i].textContent = shiftFlag ? tabUpper[i - 1] : tabLower[i - 1];
+        tab[i].classList.add(`_${tabUpper[i - 1].charCodeAt(0)}`);
+        tab[i].classList.add(`_${tabLower[i - 1].charCodeAt(0)}`);
     }
 
     //* Number Section
@@ -47,11 +57,15 @@ function setContent() {
     //* Caps Section
     for (let i = 1; i < cap.length - 1; i++) {
         cap[i].textContent = shiftFlag ? capsUpper[i - 1] : capsLower[i - 1];
+        cap[i].classList.add(`_${capsUpper[i - 1].charCodeAt(0)}`);
+        cap[i].classList.add(`_${capsLower[i - 1].charCodeAt(0)}`);
     }
 
     //* shift Section
     for (let i = 1; i < shift.length - 1; i++) {
         shift[i].textContent = shiftFlag ? shiftUpper[i - 1] : shiftLower[i - 1];
+        shift[i].classList.add(`_${shiftUpper[i - 1].charCodeAt(0)}`);
+        shift[i].classList.add(`_${shiftLower[i - 1].charCodeAt(0)}`);
     }
     shiftFlag = shiftFlag ? false : true;
 }
