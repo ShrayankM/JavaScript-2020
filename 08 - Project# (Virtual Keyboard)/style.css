@@ -7,11 +7,13 @@
 body {
     font-size: 10px;
     font-family: 'Courier New', Courier, monospace;
+    background-image: linear-gradient(to right, lightgreen, green);
     padding: 15px;
 }
 
 .area {
     /* border: .2rem solid black; */
+
     background-color: white;
     height: 45vh; 
 }
@@ -24,7 +26,7 @@ body {
 .keyboard {
     position: relative;
     height: 95vh;
-    background-image: linear-gradient(to right, lightgray, gray);
+    background-image: linear-gradient(to right, lightgreen, green);
     padding: .2rem;
     /* text-align: center; */
 }
@@ -72,6 +74,7 @@ body {
     border-radius: .2rem;
     transition: all .2s;
     text-align: center;
+    background-color: lightgray;
 }
 
 /* .num:hover {
@@ -85,7 +88,52 @@ body {
 } */
 
 .num-active {
+    border: .13rem solid white;
+    background-color: black;
+    color: white;
+    transform: translateY(.2rem);
+    box-shadow: .3rem .3rem .2rem .1rem rgba(0, 0, 0, .2);
+}
+
+.shift-active {
     background-color: white;
+    color: black;
+    transform: translateY(.2rem);
+    box-shadow: .3rem .3rem .2rem .1rem rgba(0, 0, 0, .2);
+}
+
+.caps-active {
+    background-color: green;
+    color: black;
+}
+
+.enter-active {
+    background-color: white;
+    color: black;
+    transform: translateY(.2rem);
+    box-shadow: .3rem .3rem .2rem .1rem rgba(0, 0, 0, .2);
+}
+
+.back-active {
+    background-color: red;
+    color: black;
+    transform: translateY(.2rem);
+    box-shadow: .3rem .3rem .2rem .1rem rgba(0, 0, 0, .2);
+}
+
+.space-active {
+    background-color: black;
+    transform: translateY(.2rem);
+    box-shadow: .3rem .3rem .2rem .1rem rgba(0, 0, 0, .2);
+}
+
+.tab-active {
+    background-color: white;
+    color: black;
+}
+
+.clear-active {
+    background-color: yellow;
     color: black;
     transform: translateY(.2rem);
     box-shadow: .3rem .3rem .2rem .1rem rgba(0, 0, 0, .2);
