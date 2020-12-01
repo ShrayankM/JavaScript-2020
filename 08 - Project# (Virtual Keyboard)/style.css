@@ -77,20 +77,31 @@ body {
     background-color: lightgray;
 }
 
-/* .num:hover {
+.num:hover {
     transform: translateY(-.2rem);
+    box-shadow: .3rem .3rem .2rem .1rem rgba(0, 0, 0, .2);
 }
 
 .num:active {
-    background-color: white;
-    color: black;
-    transform: translateY(.1rem);
-} */
+    border: .13rem solid white;
+    background-color: black;
+    color: white;
+    transform: translateY(.2rem);
+    box-shadow: .3rem .3rem .2rem .1rem rgba(0, 0, 0, .2);
+}
 
 .num-active {
     border: .13rem solid white;
     background-color: black;
     color: white;
+    transform: translateY(.2rem);
+    box-shadow: .3rem .3rem .2rem .1rem rgba(0, 0, 0, .2);
+}
+
+.shift:active {
+    border: .13rem solid black;
+    background-color: white;
+    color: black;
     transform: translateY(.2rem);
     box-shadow: .3rem .3rem .2rem .1rem rgba(0, 0, 0, .2);
 }
@@ -102,9 +113,17 @@ body {
     box-shadow: .3rem .3rem .2rem .1rem rgba(0, 0, 0, .2);
 }
 
+.caps:active {
+    border: .13rem solid black;
+    background-color: green;
+    color: black;
+}
+
 .caps-active {
     background-color: green;
     color: black;
+    transform: translateY(.2rem);
+    box-shadow: .3rem .3rem .2rem .1rem rgba(0, 0, 0, .2);
 }
 
 .enter-active {
@@ -114,6 +133,14 @@ body {
     box-shadow: .3rem .3rem .2rem .1rem rgba(0, 0, 0, .2);
 }
 
+.enter:active {
+    border: .13rem solid black;
+    background-color: white;
+    color: black;
+    transform: translateY(.2rem);
+    box-shadow: .3rem .3rem .2rem .1rem rgba(0, 0, 0, .2);   
+}
+
 .back-active {
     background-color: red;
     color: black;
@@ -121,7 +148,22 @@ body {
     box-shadow: .3rem .3rem .2rem .1rem rgba(0, 0, 0, .2);
 }
 
+.backspace:active {
+    border: .13rem solid black;
+    background-color: red;
+    color: black;
+    transform: translateY(.2rem);
+    box-shadow: .3rem .3rem .2rem .1rem rgba(0, 0, 0, .2);
+}
+
 .space-active {
+    background-color: black;
+    transform: translateY(.2rem);
+    box-shadow: .3rem .3rem .2rem .1rem rgba(0, 0, 0, .2);
+}
+
+.space-active {
+    border: .13rem solid white;
     background-color: black;
     transform: translateY(.2rem);
     box-shadow: .3rem .3rem .2rem .1rem rgba(0, 0, 0, .2);
@@ -137,4 +179,12 @@ body {
     color: black;
     transform: translateY(.2rem);
     box-shadow: .3rem .3rem .2rem .1rem rgba(0, 0, 0, .2);
+}
+
+.clear:active {
+    border: .13rem solid black;
+    background-color: yellow;
+    color: black;
+    transform: translateY(.2rem);
+    box-shadow: .3rem .3rem .2rem .1rem rgba(0, 0, 0, .2);   
 }
