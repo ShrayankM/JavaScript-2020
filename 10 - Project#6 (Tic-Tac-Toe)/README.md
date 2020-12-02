@@ -9,5 +9,4 @@ X's and O's game first person to create 3 in a row wins.
 ## Credits:
    * Built with the help of udemy course (The Complete JavaScript Course 2020: From Zero to Expert).
 
-![start](Images/start.png)
-![end](Images/end.png)
+![tic_tac_toe](Gifs/tictac.gif)
