@@ -10,5 +10,7 @@ and in this way guides the player to the correct number.
 ## Credits:
    * Built with the help of udemy course (The Complete JavaScript Course 2020: From Zero to Expert).
 
+
+![game_gif](Gifs/guessNumber.gif)
 ![start](Images/start.png)
 ![end](Images/end.png)
