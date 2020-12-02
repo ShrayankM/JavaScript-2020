@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    background-image: linear-gradient(to right, lightgreen, green);
+    padding: 15px;
+}
+
+.area {
+    /* border: .2rem solid black; */
+
+    background-color: white;
+    height: 45vh; 
+}
+
+.text-area {
+    margin-top: .2rem;
+    font-size: 1rem;
+}
+
+.keyboard {
+    position: relative;
+    height: 95vh;
+    background-image: linear-gradient(to right, lightgreen, green);
+    padding: .2rem;
+    /* text-align: center; */
+}
+
+.numbers-section {
+    display: flex;
+    align-items: stretch;
+    margin-top: .1rem;
+    font-size: 1.5rem;
+}
+
+.tab-section {
+    display: flex;
+    align-items: stretch;
+    /* margin-top: 1rem; */
+    font-size: 1.5rem;
+}
+
+.shift-section {
+    display: flex;
+    align-items: stretch;
+    /* margin-top: 1rem; */
+    font-size: 1.5rem;
+}
+
+.caps-section {
+    display: flex;
+    align-items: stretch;
+    /* margin-top: 1rem; */
+    font-size: 1.5rem;
+}
+
+.ctrl-section {
+    display: flex;
+    align-items: stretch;
+    /* margin-top: 1rem; */
+    font-size: 1.5rem;
+}
+
+.num {
+    border: .13rem solid black;
+    margin: .1rem;
+    padding: .5rem;
+    height: 3.65rem;
+    border-radius: .2rem;
+    transition: all .2s;
+    text-align: center;
+    background-color: lightgray;
+}
+
+.num:hover {
+    transform: translateY(-.2rem);
+    box-shadow: .3rem .3rem .2rem .1rem rgba(0, 0, 0, .2);
+}
+
+.num:active {
+    border: .13rem solid white;
+    background-color: black;
+    color: white;
+    transform: translateY(.2rem);
+    box-shadow: .3rem .3rem .2rem .1rem rgba(0, 0, 0, .2);
+}
+
+.num-active {
+    border: .13rem solid white;
+    background-color: black;
+    color: white;
+    transform: translateY(.2rem);
+    box-shadow: .3rem .3rem .2rem .1rem rgba(0, 0, 0, .2);
+}
+
+.shift:active {
+    border: .13rem solid black;
+    background-color: white;
+    color: black;
+    transform: translateY(.2rem);
+    box-shadow: .3rem .3rem .2rem .1rem rgba(0, 0, 0, .2);
+}
+
+.shift-active {
+    background-color: white;
+    color: black;
+    transform: translateY(.2rem);
+    box-shadow: .3rem .3rem .2rem .1rem rgba(0, 0, 0, .2);
+}
+
+.caps:active {
+    border: .13rem solid black;
+    background-color: green;
+    color: black;
+}
+
+.caps-active {
+    background-color: green;
+    color: black;
+    transform: translateY(.2rem);
+    box-shadow: .3rem .3rem .2rem .1rem rgba(0, 0, 0, .2);
+}
+
+.enter-active {
+    background-color: white;
+    color: black;
+    transform: translateY(.2rem);
+    box-shadow: .3rem .3rem .2rem .1rem rgba(0, 0, 0, .2);
+}
+
+.enter:active {
+    border: .13rem solid black;
+    background-color: white;
+    color: black;
+    transform: translateY(.2rem);
+    box-shadow: .3rem .3rem .2rem .1rem rgba(0, 0, 0, .2);   
+}
+
+.back-active {
+    background-color: red;
+    color: black;
+    transform: translateY(.2rem);
+    box-shadow: .3rem .3rem .2rem .1rem rgba(0, 0, 0, .2);
+}
+
+.backspace:active {
+    border: .13rem solid black;
+    background-color: red;
+    color: black;
+    transform: translateY(.2rem);
+    box-shadow: .3rem .3rem .2rem .1rem rgba(0, 0, 0, .2);
+}
+
+.space-active {
+    background-color: black;
+    transform: translateY(.2rem);
+    box-shadow: .3rem .3rem .2rem .1rem rgba(0, 0, 0, .2);
+}
+
+.space-active {
+    border: .13rem solid white;
+    background-color: black;
+    transform: translateY(.2rem);
+    box-shadow: .3rem .3rem .2rem .1rem rgba(0, 0, 0, .2);
+}
+
+.tab-active {
+    background-color: white;
+    color: black;
+}
+
+.clear-active {
+    background-color: yellow;
+    color: black;
+    transform: translateY(.2rem);
+    box-shadow: .3rem .3rem .2rem .1rem rgba(0, 0, 0, .2);
+}
+
+.clear:active {
+    border: .13rem solid black;
+    background-color: yellow;
+    color: black;
+    transform: translateY(.2rem);
+    box-shadow: .3rem .3rem .2rem .1rem rgba(0, 0, 0, .2);   
+}
