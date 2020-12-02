@@ -9,6 +9,4 @@ This is a game played by 2 players. Every player tries get four dots to match th
 ## Credits:
    * Built with the help of udemy course (The Complete JavaScript Course 2020: From Zero to Expert).
 
-![start](Images/start_.png)
-![mid](Images/mid_.png)
-![end](Images/end_.png)
+![connect_four_gif](Gifs/connectFour.gif)
