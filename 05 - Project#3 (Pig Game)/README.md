@@ -9,5 +9,4 @@ This is a game played by 2 players. Every player tries to get score of 20 or abo
 ## Credits:
    * Built with the help of udemy course (The Complete JavaScript Course 2020: From Zero to Expert).
 
-![start](Images/start.png)
-![end](Images/end.png)
+![game_gif](Gifs/pigGame.gif)
