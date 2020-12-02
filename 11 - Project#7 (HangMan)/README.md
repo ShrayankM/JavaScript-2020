@@ -9,6 +9,4 @@ the Computer generates a random word to be guessed by the player. The player has
 ## Credits:
    * Built with the help of udemy course (The Complete JavaScript Course 2020: From Zero to Expert).
 
-![start](Images/start.png)
-![mid](Images/mid.png)
-![end](Images/end.png)
+![hangman_gif](Gifs/hangman.gif)
