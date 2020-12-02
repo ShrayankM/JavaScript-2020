@@ -9,6 +9,4 @@ A simple virtual keyboard that can be used with regular keypresses as well as wi
 ## Credits:
    * Built with the help of udemy course (The Complete JavaScript Course 2020: From Zero to Expert).
 
-![start](Images/start.png)
-![mid](Images/mid.png)
-![end](Images/end.png)
+![keyboard_gif](Gifs/keyboard.gif)
