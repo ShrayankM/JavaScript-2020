@@ -81,6 +81,11 @@ const displayMovements = function(movements) {
 	})
 }
 
+const calcPrintBalance = function(movements) {
+	const balance = movements.reduce((acc, cur) => acc + cur, 0);
+	labelBalance.textContent = `${balance}€`;
+}
+
 
 const createUsernames = function(accounts) {
 	accounts.forEach(function(acc) {
@@ -100,8 +105,9 @@ const createUsernames = function(accounts) {
 
 createUsernames(accounts);
 
-console.log(accounts);
+// console.log(accounts);
 displayMovements(account1.movements);
+calcPrintBalance(account1.movements);
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
@@ -202,3 +208,35 @@ const convert = function(value) {
 // const dollars = movements.map((mov) => mov * eurToUsd); //* Using Arrow functions
 const dollars = movements.map(convert);
 // console.log(dollars);
+
+
+//* FILTER METHOD
+const deposits = movements.filter(function(mov) {
+	return mov > 0;
+})
+
+const withdrawls = movements.filter(function(mov) {
+	return mov < 0;
+})
+
+//TODO array.movements(function, initialValueOfAccumalator)
+// const balance = movements.reduce(function(acc, cur, index, arr) {
+// 	console.log(`Iteration ${index}: Value = ${acc}`);
+// 	return acc + cur;
+// }, 0)
+
+const balance = movements.reduce((acc, cur) => acc + cur, 0);
+
+console.log(deposits);
+console.log(withdrawls);
+
+console.log(movements);
+console.log(balance);
+
+
+const maximum = movements.reduce((acc, cur) => {
+	acc = (cur > acc) ? cur : acc;
+	return acc;
+}, movements[0])
+
+console.log(maximum);
