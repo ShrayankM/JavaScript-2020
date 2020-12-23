@@ -43,3 +43,17 @@ console.log(calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]));
 console.log(calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]));
 
 //* ----------------------------------------- *//
+
+//* ---------- Coding Challenge #3 ---------- *//
+
+const calcAverageHumanAgeChained = function(dogsAge) {
+    const average = dogsAge.map((value) => {
+        return (value <= 2) ? 2 * value : 16 + value * 4;
+    }).filter((value) => value >= 18).reduce((acc, value, index, arr) => acc + value/arr.length, 0);
+    return average;
+}
+
+console.log(calcAverageHumanAgeChained([5, 2, 4, 1, 15, 8, 3]));
+console.log(calcAverageHumanAgeChained([16, 6, 10, 5, 6, 1, 4]));
+
+//* ----------------------------------------- *//
