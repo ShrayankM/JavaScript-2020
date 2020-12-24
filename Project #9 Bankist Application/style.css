@@ -60,7 +60,7 @@ body {
 }
 
 .main {
-    border: .2rem solid black;
+    /* border: .2rem solid black; */
     margin-top: .5rem;
     padding: 2rem 2rem 2rem 2rem;
 
@@ -106,73 +106,175 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+
+    margin-top: 1rem;
 }
 
 .movements {
-    margin-left: 6rem;
+    margin-left: 3rem;
     /* border: .3rem solid gray; */
     width: 50%;
     height: 100%;
     overflow: scroll;
 
     padding: 1rem 0rem 0rem 1rem;
+    background-color: white;
+
+    border-radius: 1rem;
 }
 
 .movements__row {
     height: 5rem;
-    border: .1rem solid green;
+    /* border: .1rem solid green; */
     width: 100%; 
 
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 2rem;
+    padding: 0 2rem 2rem 2rem;
+
+    text-align: center;
 
 }
 
+.movements__type {
+    border-radius: 1rem;
+    width: 10rem;
+    height: 2rem;
+
+    color:white;
+    padding: 0.3rem 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.movements__value {
+    font-size: 2rem;
+    color: #000;
+    /* font-weight: bold; */
+}
+
+.movements__type--deposit {
+    background-image: linear-gradient(to top left, #39b385, #9be15d);
+}
+
+.movements__type--withdrawal {
+    background-image: linear-gradient(to top left, #e52a5a, #ff585f);
+}
+
 .actions {
-    padding: 1rem 0rem 0rem 1rem;
-    margin-right: 6rem;
+    padding: 0rem 0rem 0rem 1rem;
+    margin-right: 3rem;
     /* border: .3rem solid red; */
     width: 50%;
     height: 100%;
 }
 
 .actions__types {
-    border: .2rem solid black;
-    /* background-color: red; */
+
     height: 12rem;
     width: 100%;
+    padding: 2rem 2rem 2rem 2rem;
+    border-radius: 1.5rem;
+
+    font-family:'Courier New', Courier, monospace;
 }
 
-.actions__types--transferAmount {
+.action__label {
+    font-weight: bold;    
+    font-size: 2rem;
+}
+
+.actions__input {
+    border: none;
+    border-radius: 0.7rem;
+    text-align: center;
+    padding: 0.3rem 1rem;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+
+    width: 18rem;
+    background-color: rgb(255, 255, 255, 0.3);
+    transition: all 0.5s;
+}
+
+.actions__btn {
+    background-color: white;
+    color: black;
+    width: 4rem;
+    font-size: 1.8rem;
+    border-radius: 0.7rem;
+    border: none;
+}
+
+.form__label {
+    font-size: 1.5rem;
+    /* padding: 1rem 0rem; */
+    width: 18rem;
+    padding: .5rem 1rem 1rem 6rem;
+}
+
+.actions__input:focus {
+    outline: none;
+    background-color: rgb(255, 255, 255, 0.6);
+}
+
+
+.actions--transferAmount {
     background-image: linear-gradient(to top left, #ffb003, #ffcb03);
 }
 
-.actions__types--requestLoan {
+.actions--requestLoan {
     margin-top: 1.2rem;
     background-image: linear-gradient(to top left, #39b385, #9be15d);
 }
 
-.actions__types--closeAccount {
+.actions--closeAccount {
     margin-top: 1.2rem;
     background-image: linear-gradient(to top left, #e52a5a, #ff585f);
 }
 
 .summary {
-    margin-left: 6rem;
-    margin-right: 6rem;
-    margin-top: 1rem;
-    border: .2rem solid red;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: start;
+    align-items: flex-end;
+    margin-left: 3rem;
+    margin-right: 3rem;
 }
 
-.summary__balance {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    padding: 1rem 1rem 1rem 1rem;
+.summary__label {
+    display: inline;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-right: 0.8rem;
 }
+
+.summary__value {
+    display: inline;
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-right: 2.5rem;
+}
+
+.summary__value--in, .summary__value--interest {
+    color: #66c873;
+}
+
+.summary__value--out {
+    color: #f5465d;
+}
+
+.btn--sort {
+    margin-left: 5rem;
+    border: none;
+    background-color: white;
+    display: inline;
+
+    background-color: white;
+    color: black;
+    width: 8rem; 
+    font-size: 1.8rem;
+    border-radius: 0.7rem;
+    border: none;
+}
+

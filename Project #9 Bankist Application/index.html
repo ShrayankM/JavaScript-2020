@@ -38,38 +38,65 @@
                     As of <span class="date"> 05/03/2037 </span>
                 </p>
             </div>
-            <p class = "balance__info balance__info--value"> 0000$ </p>
+            <p class="balance__info balance__info--value"> 0000$ </p>
         </div>
 
-        <div class = "transactions">
-            <div class = "movements">
-                <div class = "movements__row">
-                    <div class = "movements__type movements__type--deposit"> 2 deposit </div>
-                    <div class = "movemetns__value"> 2000$ </div>
+        <div class="transactions">
+            <div class="movements">
+                <div class="movements__row">
+                    <div class="movements__type movements__type--deposit"> 2 deposit </div>
+                    <div class="movements__value"> 2000$ </div>
+                </div>
+
+                <div class="movements__row">
+                    <div class="movements__type movements__type--withdrawal"> 1 withdrawal </div>
+                    <div class="movements__value"> 1000$ </div>
                 </div>
             </div>
-            <div class = "actions">
-                <div class = "actions__types actions__types--transferAmount"></div>
-                <div class = "actions__types actions__types--requestLoan"></div>
-                <div class = "actions__types actions__types--closeAccount"></div>
+            <div class="actions">
+                <div class="actions__types actions--transferAmount">
+
+                    <h2 class="action__label"> Transfer money </h2>
+                    <form action="" class="actions__form">
+                        <input type="text" class="actions__input transfer--username">
+                        <input type="text" class="actions__input transfer--amount">
+                        <input type="submit" class="actions__btn" value="&rarr;">
+                    </form>
+                    <label for="username" class="form__label">Transfer to</label>
+                    <label class="form__label" for="amount">Amount</label>
+                </div>
+                <div class="actions__types actions--requestLoan">
+                    <h2 class="action__label"> Request Loan </h2>
+                    <form action="" class="actions__form">
+                        <input type="text" class="actions__input">
+                        <input type="submit" class="actions__btn" value="&rarr;">
+                    </form>
+                    <label class="form__label">Amount</label>
+                </div>
+                <div class="actions__types actions--closeAccount">
+                    <h2 class="action__label"> Close Account </h2>
+                    <form action="" class="actions__form">
+                        <input type="text" class="actions__input">
+                        <input type="text" class="actions__input">
+                        <input type="submit" class="actions__btn" value="&rarr;">
+                    </form>
+                    <label class="form__label">Confirm user</label>
+                    <label class="form__label">Confirm PIN</label>
+                </div>
             </div>
         </div>
 
         <div class = "summary">
-            <div class = "summary__balance">
-                <p class = "summary__label--In"> In </p>
-                <p class = "summary__balance--income">  0000$ </p>
-
-                <p class = "summary__label--Out"> Out </p>
-                <p class = "summary__balance--outcome"> 0000$ </p>
-
-                <p class = "summary__label--Interest"> Interest </p> 
-                <p class = "summary__balance--interset"> 0000$ </p>
+            <div class = "summary__info">
+                <p class = "summary__label"> In </p>
+                <p class = "summary__value summary__value--in"> 0000$ </p>
+                <p class = "summary__label"> Out </p>
+                <p class = "summary__value summary__value--out"> 0000$ </p>
+                <p class = "summary__label"> Interest </p>
+                <p class = "summary__value summary__value--interest"> 0000$ </p>
             </div>
 
-            <button class = "sortBtn"> Sort </button>
-
-            <p class = "timer"> You will be logged out in 5:00 </p>
+            <button class = "btn--sort"> Sort &darr;</button>
         </div>
     </div>
 </body>
