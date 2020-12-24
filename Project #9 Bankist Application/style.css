@@ -1,0 +1,178 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F3F3F3;
+    height: 100vh;
+    padding: 2rem;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    /* border: .1rem solid black; */
+}
+
+.welcome {
+    font-size: 2rem;
+}
+
+.head-title {
+    font-size: 3rem;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* TODO Common Login Buttons */
+.login__input {
+    font-size: 1.7rem;
+    height: 3rem;
+    width: 12rem;
+    border-radius: 2rem;
+    text-align: center;
+
+    /** Animation Delay */
+    border: 0.01rem solid white;
+    transition: all 0.4s;
+}
+
+/** On Focus Animation */
+.login__input:focus {
+    outline: none;
+    border: .01rem solid #ccc;
+}
+
+/* ! Signin Button */
+.login__input--signin {
+    width: 5rem;
+    color: black;
+    background-color: rgb(49, 151, 49);
+}
+
+.main {
+    border: .2rem solid black;
+    margin-top: .5rem;
+    padding: 2rem 2rem 2rem 2rem;
+
+    height: 90vh;
+    margin-bottom: 2rem;
+    /* NOTE This creates the fade in/out anumation */
+    opacity: 100;
+    transition: all 1s;
+}
+
+.balance {
+    grid-column: 1 / span 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.balance__info {
+    font-size: 2rem;
+    /* font-weight: bold; */
+    color: #000000;
+}
+
+.balance__info--label {
+    margin-left: 6rem;
+    font-size: 3.5rem;
+}
+
+.balance__info--date {
+    margin-left: 6rem;
+    font-size: 2rem;
+    color: #434343;
+}
+
+.balance__info--value {
+    margin-right: 6rem;
+    font-size: 3rem;
+    color: #434343;
+    font-style: italic;   
+}
+
+.transactions {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.movements {
+    margin-left: 6rem;
+    /* border: .3rem solid gray; */
+    width: 50%;
+    height: 100%;
+    overflow: scroll;
+
+    padding: 1rem 0rem 0rem 1rem;
+}
+
+.movements__row {
+    height: 5rem;
+    border: .1rem solid green;
+    width: 100%; 
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+
+}
+
+.actions {
+    padding: 1rem 0rem 0rem 1rem;
+    margin-right: 6rem;
+    /* border: .3rem solid red; */
+    width: 50%;
+    height: 100%;
+}
+
+.actions__types {
+    border: .2rem solid black;
+    /* background-color: red; */
+    height: 12rem;
+    width: 100%;
+}
+
+.actions__types--transferAmount {
+    background-image: linear-gradient(to top left, #ffb003, #ffcb03);
+}
+
+.actions__types--requestLoan {
+    margin-top: 1.2rem;
+    background-image: linear-gradient(to top left, #39b385, #9be15d);
+}
+
+.actions__types--closeAccount {
+    margin-top: 1.2rem;
+    background-image: linear-gradient(to top left, #e52a5a, #ff585f);
+}
+
+.summary {
+    margin-left: 6rem;
+    margin-right: 6rem;
+    margin-top: 1rem;
+    border: .2rem solid red;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.summary__balance {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 1rem 1rem 1rem 1rem;
+}
