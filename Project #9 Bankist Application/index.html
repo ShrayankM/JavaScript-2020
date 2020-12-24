@@ -60,7 +60,7 @@
                     <form action="" class="actions__form">
                         <input type="text" class="actions__input transfer--username">
                         <input type="text" class="actions__input transfer--amount">
-                        <input type="submit" class="actions__btn" value="&rarr;">
+                        <input type="submit" class="actions__btn transfer--btn" value="&rarr;">
                     </form>
                     <label for="username" class="form__label">Transfer to</label>
                     <label class="form__label" for="amount">Amount</label>
@@ -68,17 +68,17 @@
                 <div class="actions__types actions--requestLoan">
                     <h2 class="action__label"> Request Loan </h2>
                     <form action="" class="actions__form">
-                        <input type="text" class="actions__input">
-                        <input type="submit" class="actions__btn" value="&rarr;">
+                        <input type="text" class="actions__input request--amount">
+                        <input type="submit" class="actions__btn request--btn" value="&rarr;">
                     </form>
                     <label class="form__label">Amount</label>
                 </div>
                 <div class="actions__types actions--closeAccount">
                     <h2 class="action__label"> Close Account </h2>
                     <form action="" class="actions__form">
-                        <input type="text" class="actions__input">
-                        <input type="text" class="actions__input">
-                        <input type="submit" class="actions__btn" value="&rarr;">
+                        <input type="text" class="actions__input close--username">
+                        <input type="text" class="actions__input close--pin">
+                        <input type="submit" class="actions__btn close--btn" value="&rarr;">
                     </form>
                     <label class="form__label">Confirm user</label>
                     <label class="form__label">Confirm PIN</label>
@@ -101,6 +101,7 @@
     </div>
 </body>
 
+<script src = "script.js"></script>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

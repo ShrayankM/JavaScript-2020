@@ -67,7 +67,7 @@ body {
     height: 90vh;
     margin-bottom: 2rem;
     /* NOTE This creates the fade in/out anumation */
-    opacity: 100;
+    opacity: 0;
     transition: all 1s;
 }
 
@@ -91,7 +91,8 @@ body {
 
 .balance__info--date {
     margin-left: 6rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    margin-top: -2rem;
     color: #434343;
 }
 
@@ -114,13 +115,12 @@ body {
     margin-left: 3rem;
     /* border: .3rem solid gray; */
     width: 50%;
-    height: 100%;
-    overflow: scroll;
-
+    height: 40rem;
     padding: 1rem 0rem 0rem 1rem;
     background-color: white;
 
     border-radius: 1rem;
+    overflow-x: scroll;
 }
 
 .movements__row {
@@ -133,14 +133,15 @@ body {
     justify-content: space-between;
     padding: 0 2rem 2rem 2rem;
 
+    margin-top: 1rem;
     text-align: center;
-
+    border-bottom: 1px solid lightgray;
 }
 
 .movements__type {
     border-radius: 1rem;
-    width: 10rem;
-    height: 2rem;
+    width: 15rem;
+    height: 2.3rem;
 
     color:white;
     padding: 0.3rem 1rem;
@@ -172,9 +173,9 @@ body {
 
 .actions__types {
 
-    height: 12rem;
+    height: 13rem;
     width: 100%;
-    padding: 2rem 2rem 2rem 2rem;
+    padding: 2rem 6rem 6rem 6rem;
     border-radius: 1.5rem;
 
     font-family:'Courier New', Courier, monospace;
@@ -211,7 +212,7 @@ body {
     font-size: 1.5rem;
     /* padding: 1rem 0rem; */
     width: 18rem;
-    padding: .5rem 1rem 1rem 6rem;
+    padding: .5rem 0rem 0rem 4rem;
 }
 
 .actions__input:focus {
