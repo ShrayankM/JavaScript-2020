@@ -193,6 +193,8 @@ closeBtn.addEventListener('click', function(event) {
         accounts.splice(index, 1);
 
         main.style.opacity = 0;
+
+        message.textContent = "Login to get Started";
     }
 })
 // ******************** ************** ********************** //
