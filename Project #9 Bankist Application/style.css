@@ -67,7 +67,7 @@ body {
     height: 90vh;
     margin-bottom: 2rem;
     /* NOTE This creates the fade in/out anumation */
-    opacity: 0;
+    opacity: 100;
     transition: all 1s;
 }
 
