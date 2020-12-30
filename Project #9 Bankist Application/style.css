@@ -67,7 +67,7 @@ body {
     height: 90vh;
     margin-bottom: 2rem;
     /* NOTE This creates the fade in/out anumation */
-    opacity: 100;
+    opacity: 0;
     transition: all 1s;
 }
 
@@ -130,7 +130,7 @@ body {
 
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     padding: 0 2rem 2rem 2rem;
 
     margin-top: 1rem;
@@ -147,11 +147,13 @@ body {
     padding: 0.3rem 1rem;
     font-weight: bold;
     text-transform: uppercase;
+    margin-right: 2rem;
 }
 
 .movements__value {
     font-size: 2rem;
     color: #000;
+    margin-left: 15rem;
     /* font-weight: bold; */
 }
 
@@ -278,4 +280,15 @@ body {
     border-radius: 0.7rem;
     border: none;
 }
+
+.logout-timer {
+    padding: 0 0.3rem;
+    margin-top: 1.1rem;
+    text-align: right;
+    font-size: 1.25rem;
+  }
+  
+  .timer {
+    font-weight: 600;
+  }
 
