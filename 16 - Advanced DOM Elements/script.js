@@ -81,6 +81,151 @@ navLinkParent.addEventListener('click', function (event) {
 });
 
 
+//* Tabbed Component
+
+const tabs = document.querySelectorAll('.operations__tab');
+const tabsContainer = document.querySelector('.operations__tab-container');
+const tabsContent = document.querySelectorAll('.operations__content');
+
+// tabs.forEach(function(tab) {
+// 	tab.addEventListener('click', function() {
+// 		console.log("Tab");
+// 	})
+// })
+
+tabsContainer.addEventListener('click', function (event) {
+
+	const clicked = event.target.closest('.operations__tab');
+	// console.log(clicked);
+
+	if (!clicked) return;
+	tabs.forEach(t => t.classList.remove('operations__tab--active'));
+	clicked.classList.add('operations__tab--active');
+
+	const n = clicked.getAttribute('data-tab');
+	tabsContent.forEach(tab => tab.classList.remove('operations__content--active'));
+	document.querySelector(`.operations__content--${n}`).classList.add('operations__content--active');
+	// if (event.target.classList.contains('btn') && event.target.classList.contains('operations__tab')) {
+
+	// 	// console.log(event.target);
+	// 	// console.log(event.target.getAttribute('data-tab'));
+	// 	const currentActive = document.querySelector('.operations__content--active');
+	// 	const n = event.target.getAttribute('data-tab');
+
+	// 	const currentBtn = document.querySelector('.operations__tab--active');
+	// 	currentBtn.classList.remove('operations__tab--active');
+	// 	document.querySelector(`.operations__tab--${n}`).classList.add('operations__tab--active');
+
+	// 	currentActive.classList.remove('operations__content--active');
+
+	// 	document.querySelector(`.operations__content--${n}`).classList.add('operations__content--active');
+
+	// }
+})
+
+
+//* Fadded Navigation Bar
+const navLinks = document.querySelector('.nav__links');
+
+const handleHover = function(event) {
+	if (event.target.classList.contains('nav__link')) console.log(event.target, this);
+	if (event.target.classList.contains('nav__link')) {
+
+		const opacity = this;
+		const parent = event.target.closest('.nav');
+		const links = parent.querySelectorAll('.nav__link');
+		const logo = parent.querySelector('img');
+
+		links.forEach(function(link) {
+			if (event.target !== link) link.style.opacity = opacity;
+		})
+		logo.style.opacity = opacity;
+	}
+}
+
+navLinks.addEventListener('mouseover', handleHover.bind(0.5));
+navLinks.addEventListener('mouseout', handleHover.bind(1));
+
+
+//* Sticky Navigation
+
+// const nav = document.querySelector('.nav');
+// window.addEventListener('scroll', function() {
+// 	if (window.scrollY - 500 > sectionOne.getBoundingClientRect().top) 
+// 		nav.classList.add('sticky');
+// 	else                                                      
+// 		nav.classList.remove('sticky');
+// })
+
+const header = document.querySelector('.header');
+const nav = document.querySelector('.nav');
+
+const stickyNav = function(entries, observer) {
+	const [entry] = entries;
+	if (!entry.isIntersecting) {
+		nav.classList.add('sticky');
+	}
+	else {
+		nav.classList.remove('sticky');
+	}
+}
+const observer = new IntersectionObserver(stickyNav, {
+	root: null,
+	threshold: 0,
+	rootMargin: `-${nav.getBoundingClientRect().height}px`,
+});
+observer.observe(header);
+
+
+//* Revel Sections
+const sections = document.querySelectorAll('.section');
+const sectionRevel = function(entries, observer) {
+	const [entry] = entries;
+
+	if (!entry.isIntersecting) return ;
+	entry.target.classList.remove('section--hidden');
+	observer.unobserve(entry.target);
+}
+
+const obsSection = new IntersectionObserver(sectionRevel, {
+	root: null,
+	threshold: 0.15,
+});
+
+sections.forEach(function (section) {
+	obsSection.observe(section);
+	section.classList.add('section--hidden');
+})
+
+//* Lazy Loading Images
+
+const lazyImages = document.querySelectorAll('img[data-src]');
+
+const loadImages = function(entries, observer) {
+	const [entry] = entries;
+	// console.log(entry);
+
+	if (!entry.isIntersecting) return;
+	entry.target.setAttribute('src', entry.target.getAttribute('data-src'));
+	// entry.target.classList.remove('lazy-img');
+
+	entry.target.addEventListener('load', function() {
+		this.classList.remove('lazy-img');
+	})
+	observer.unobserve(entry.target);
+}
+
+const imgObserver = new IntersectionObserver(loadImages, {
+	root: null,
+	threshold: 0,
+	rootMargin: '200px',
+});
+
+lazyImages.forEach(function (img) {
+	imgObserver.observe(img);
+})
+
+
 //! Lectures
 
 /*
@@ -200,6 +345,37 @@ document.querySelector('.nav').addEventListener('click', function(event) {
 	// console.log('NAV', event.target, event.currentTarget);
 
 	event.stopPropagation();
+})
+
+
+
+//* DOM Traversing
+
+const h1 = document.querySelector('h1');
+
+//todo going downwards (children elements)
+console.log(h1.querySelectorAll('.highlight'));
+console.log(h1.childNodes);
+console.log(h1.children);
+
+h1.firstElementChild.style.color = '#000000';
+h1.lastElementChild.style.color = '#ffffff';
+
+//todo going upwards (parent elements)
+console.log(h1.parentElement);
+console.log(h1.parentNode);
+
+h1.closest('.header').style.background = 'var(--gradient-secondary)';
+h1.closest('h1').style.background = 'var(--gradient-primary)';
+
+//todo goind sideways (siblings)
+console.log(h1.previousElementSibling)
+console.log(h1.nextElementSibling);
+
+[...h1.parentElement.children].forEach(function(element) {
+	if (element !== h1) {
+		element.style.transform = 'scale(0.5)';
+	}
 })
 
 */
