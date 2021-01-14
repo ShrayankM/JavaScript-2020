@@ -57,7 +57,7 @@ setInterval(function() {
 
     faceSeconds.style.setProperty('transform', `translate(-50%, -100%) rotate(${secsDeg}deg)`);
     faceMinutes.style.setProperty('transform', `translate(-50%, -100%) rotate(${6*mins}deg)`);
-    faceHours.style.setProperty('transform', `translate(-50%, -100%) rotate(${12*hrs}deg)`);
+    faceHours.style.setProperty('transform', `translate(-50%, -100%) rotate(${30*hrs}deg)`);
     // console.log(6*secs);
     secsDeg += 6;
 
